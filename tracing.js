@@ -14,7 +14,7 @@ const traceExporter = new OTLPTraceExporter(collectorOptions);
 
 const sdk = new opentelemetry.NodeSDK({
   resource: new Resource({
-    [SemanticResourceAttributes.SERVICE_NAME]: 'FoodMe',
+    [SemanticResourceAttributes.SERVICE_NAME]: 'FoodMe-OTel',
   }),
   traceExporter,
   instrumentations: [getNodeAutoInstrumentations()]
